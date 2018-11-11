@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.employeeForm = this.fb.group({
-      fullName: [''],
+      fullName: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],
       email: [''],
       skills: this.fb.group({
         skillName: [''],
