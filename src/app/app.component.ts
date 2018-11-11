@@ -17,4 +17,8 @@ export class AppComponent implements OnInit {
       email: new FormControl()
     });
   }
+
+  onSubmit(): void {
+    console.log(this.employeeForm);
+  }
 }
