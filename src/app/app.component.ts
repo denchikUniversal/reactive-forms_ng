@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'reactive-forms';
+export class AppComponent implements OnInit {
+  employeeForm: FormGroup;
+  constructor(private fb: FormBuilder) {
+  }
+
+  ngOnInit() {
+    this.employeeForm = new FormGroup({
+      fullName: new FormControl(),
+      email: new FormControl()
+    });
+  }
 }
