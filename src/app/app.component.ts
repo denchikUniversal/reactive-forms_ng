@@ -19,6 +19,8 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.employeeForm);
+    console.log(this.employeeForm.touched);
+    console.log(this.employeeForm.value);
+    console.log(this.employeeForm.get('fullName').value);
   }
 }
